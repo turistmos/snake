@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "477a943a-3f8f-478b-ac76-a0451cb4c1ff": {
+      "ProjectGuid": "477a943a-3f8f-478b-ac76-a0451cb4c1ff",
+      "DisplayName": "GruppInlUppg",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

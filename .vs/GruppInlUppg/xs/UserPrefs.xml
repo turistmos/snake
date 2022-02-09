@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{477A943A-3F8F-478B-AC76-A0451CB4C1FF}|Default">
+  <MonoDevelop.Ide.ItemProperties.GruppInlUppg PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="17" Column="37" />
+      <File FileName="ConsoleRenderer.cs" Line="16" Column="1" />
+      <File FileName="GameObject.cs" Line="1" Column="1" />
+      <File FileName="GameWorld.cs" Line="11" Column="40" />
+      <File FileName="Position.cs" Line="1" Column="1" />
+      <File FileName="Player.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GruppInlUppg" expanded="True">
+            <Node name="GruppInlUppg" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
