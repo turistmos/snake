@@ -9,11 +9,14 @@ namespace GruppInlUpp2kelett
             this.Position = position;
             this.Appearance = appearence;
         }
+        /// <summary>
+        /// Updates the position of food to random coord within playingfield.
+        /// </summary>
         public override void Update()
         {
             Random rnd = new Random();
-            this.Position.X = rnd.Next(2, 18);
-            this.Position.Y = rnd.Next(2, 18);
+            this.Position.X = rnd.Next(2, GameWorld.MapWidth-2);
+            this.Position.Y = rnd.Next(2, GameWorld.MapHeight-2);
         }
     }
 }

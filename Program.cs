@@ -11,15 +11,10 @@ namespace GruppInlUpp2kelett
             // utan att bromsa upp spelet, som Console.ReadLine() gör
             ConsoleKey ReadKeyIfExists() => Console.KeyAvailable ? Console.ReadKey(intercept: true).Key : ConsoleKey.NoName;
 
-            // TODO Presentera eventuellt någon info eller meny här
-
             // Initialisera spelet
             const int frameRate = 5;
             GameWorld world = new GameWorld();
             ConsoleRenderer renderer = new ConsoleRenderer(world);
-
-            // TODO Skapa spelare och andra objekt etc. genom korrekta anrop till vår GameWorld-instans
-            // ...
 
             // Huvudloopen
             bool running = true;
@@ -74,14 +69,12 @@ namespace GruppInlUpp2kelett
                             else
                             direction = Direction.Right;
                             break;
-                            // TODO Lägg till logik för andra knapptryckningar
-                            // ...
                     }
 
                 
 
                 // Uppdatera världen och rendera om
-                //renderer.RenderBlank();
+                // renderer.RenderBlank();
                 
                 running =world.Update(direction);
                 renderer.Render();
@@ -97,7 +90,6 @@ namespace GruppInlUpp2kelett
 
             }
 
-            //Console.Clear();
             Console.WriteLine($"Poäng: {world.getPoints()}");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Du förlorade!");

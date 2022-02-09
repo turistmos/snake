@@ -2,7 +2,7 @@ using System;
 
 namespace GruppInlUpp2kelett
 {
-        public enum Direction
+    public enum Direction
     {
         Right,
         Left,
@@ -13,8 +13,6 @@ namespace GruppInlUpp2kelett
     {
         public Direction Direction;
 
-        
-
         public Player(Position position, Direction direction ,Char appearance) 
         {
             this.Position = position;
@@ -22,14 +20,16 @@ namespace GruppInlUpp2kelett
             this.Appearance = appearance;
         }
 
+        /// <summary>
+        /// Updates position depending on direction. Changes position to other side of map if wall is struck.
+        /// </summary>
+        /// <param name="direction"></param>
         public void Update(Direction direction)
         {
             switch (direction)
             {
                 case Direction.Right:
-
                     Position.X++;
-                    //this.Position.X = this.Position.X+1;
                     break;
                 case Direction.Left:
                     Position.X--;
@@ -41,7 +41,7 @@ namespace GruppInlUpp2kelett
                     Position.Y++;
                     break;
             }
-            if(Position.X <= 1)
+            if(Position.X < 1)
             {
                 Position.X = (GameWorld.MapWidth-1);
             }
@@ -49,26 +49,20 @@ namespace GruppInlUpp2kelett
             {
                 Position.X = 1;
             }
-            else if(Position.Y >= (GameWorld.MapHeight-1))
+            else if(Position.Y > (GameWorld.MapHeight-1))
             {
                 Position.Y = 1;
             }
-            else if(Position.Y <= 1)
+            else if(Position.Y < 1)
             {
                 Position.Y = (GameWorld.MapHeight - 2);
             }
         }
-        public Direction getDirection()
-        {
-            return Direction;
-        }
-        public Position getPosition()
-        {
-            return Position;
-        }
+       
+        
         public override void Update()
         {
-            
+            throw new NotImplementedException();    
         }
     }
 }
