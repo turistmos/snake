@@ -15,8 +15,8 @@ namespace GruppInlUpp2kelett
         public override void Update()
         {
             Random rnd = new Random();
-            this.Position.X = rnd.Next(2, GameWorld.MapWidth-2);
-            this.Position.Y = rnd.Next(2, GameWorld.MapHeight-2);
+            this.Position.X = rnd.Next(2, GameWorld.getMapWidth()-2);
+            this.Position.Y = rnd.Next(2, GameWorld.getMapHeight()-2);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace GruppInlUpp2kelett
             // Try Catch to work on Mac.
             try
             {
-                Console.SetWindowSize(GameWorld.ScreenWidth, GameWorld.ScreenHeigth);
-                Console.SetBufferSize(GameWorld.ScreenWidth, GameWorld.ScreenHeigth);
+                Console.SetWindowSize(GameWorld.getMapWidth(), GameWorld.getMapHeight());
+                Console.SetBufferSize(GameWorld.getMapWidth(), GameWorld.getMapHeight());
             }
             catch (PlatformNotSupportedException)
             {
@@ -31,12 +31,12 @@ namespace GruppInlUpp2kelett
             Console.Clear();
 
             Console.WriteLine(world.getPoints());
-
+            //displays all objects to create the snake and food in the terminal
             foreach (var obj in world.gameObjects)
             {
                 if (obj is Tail)
                 {
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = GetRandomConsoleColor();
                     Console.SetCursorPosition((int)obj.Position.X, (int)obj.Position.Y);
                     
                     Console.Write(obj.Appearance);
@@ -52,6 +52,15 @@ namespace GruppInlUpp2kelett
             }
             Console.SetCursorPosition(0, 0);
         }
-     
+        private static Random rng = new Random();
+        /// <summary>
+        /// returns a random color for the tail objects
+        /// </summary>
+        /// <returns></returns>
+        private static ConsoleColor GetRandomConsoleColor()
+        {
+            var consoleColors = Enum.GetValues(typeof(ConsoleColor));
+            return (ConsoleColor)consoleColors.GetValue(rng.Next(consoleColors.Length));
+        }
     }
 }

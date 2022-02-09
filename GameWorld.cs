@@ -7,13 +7,10 @@ namespace GruppInlUpp2kelett
     public class GameWorld
     {
 
-        private const ConsoleColor BorderColor = ConsoleColor.Gray;
-        public const int MapWidth = 20;
-        public const int MapHeight = 20;
-        public const int ScreenWidth = MapWidth ;
-        public const int ScreenHeigth = MapHeight;
-        public int Points { get; set; }
-        public Direction direction;
+        private const int MapWidth = 20;
+        private const int MapHeight = 20;
+        private int Points { get; set; }
+        private Direction direction;
 
         public List<GameObject> gameObjects = new List<GameObject>();
         List<Player> players = new List<Player>();
@@ -115,6 +112,14 @@ namespace GruppInlUpp2kelett
         public int getPoints()
         {
             return Points;
+        }
+        public static int getMapWidth()
+        {
+            return MapWidth;
+        }
+        public static int getMapHeight()
+        {
+            return MapHeight;
         }
 
     }
